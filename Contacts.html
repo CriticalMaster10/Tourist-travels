@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tourist Travel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+nav ul li{
+list-style-type:none;
+display: inline-block;
+}
+nav ul li a{
+text-decoration:none;
+color:white;
+margin:10px;
+}
+header{height:200px;
+background:linear-gradient(to top left, #000066 0%, #6699ff 100%);
+color:white; font-size:30px; font-family:verdana; text-align:center; padding:20px; font-style:italic; font-weight:bold; font-variant:small-caps;
+}
+footer{height:100px;
+background-color:#6699ff;
+}
+.input_idk{
+background-color:#36FF9E; text-align:center; font-style:Italic; padding:20px;
+}
+.idk{
+background-color:yellow; border-radius:20%; text-align:center; padding:20px;
+}
+.style{
+border:2px solid blue; width:400px; text-align:center; margin-left:35%;
+}
+</style>
+<script>
+function validate(){
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var email=document.getElementById("email").value;
+var message=document.getElementById("message").value;
+var error=document.getElementById("error_message");
+var text;
+if(name.length < 3)
+{
+error.innerHTML = "Please Enter a Valid Name";
+return false;
+}
+if(isNaN(phone) || phone.length != 10){
+text="Please Enter a Valid Phone Number";
+error.innerHTML = text;
+return false;
+}
+if(email.indexOf("@") == -1 || email.length < 6) {
+text="Please Enter a Valid Email";
+error.innerHTML = text;
+return false;
+}
+if(message.legth <= 140){
+text = "Please Enter More than 140 Characters";
+error.innerHTML = text;
+return false;
+}
+alert("Form Submited Successfully");
+return true;
+}
+</script>
+</head>
+<body>
+<header>
+<h1>Mumbai</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a>
+<li><a href="Hotel.html">Hotels</a>
+<li><a href="Restaurants.html">Restuarants</a>
+<li><a href="Contacts.html">Contacts</a>
+</ul>
+</nav>
+</header>
+<main>
+<div class="style">
+<h2>Contact Us</h2>
+<form id="myform" onsubmit="return validate();">
+<div class="input_idk">
+<input type="text" placeholder="Name" id="name">
+</div>
+<div class="input_idk">
+<input type="text" placeholder="Phone" id="phone">
+</div>
+<div class="input_idk">
+<input type="text" placeholder="Email" id="email">
+</div>
+<div class="input_idk">
+<input type="text" placeholder="Message" id="message">
+</div>
+<div class="idk">
+<input type="submit">
+</div>
+<div id="error_message"></div>
+</form>
+</div>
+</main>
+<footer>
+<p>With the help of Mindchamp and there wonderful clases</p>
+To Know More About Mumbai <a href="https://www.bing.com/travel/place-information?q=Mumbai&SID=fbbc8d69-667a-e1ff-34bf-e524be01025d&form=TGBWPT&entrypoint=TGBWPT">Click Here</a>
+</footer>
+</body>
+</html>
