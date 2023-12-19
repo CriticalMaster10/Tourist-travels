@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<title>Tourist Travel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(function() {
+ $('.faq-list-item').click(function() {
+    var $answer = $(this).find('.answer');
+    if($answer.hasClass('open')) { 
+      $answer.removeClass('open');
+      
+      $answer.slideUp();
+      
+  
+      $(this).find("span").text("+");
+      
+    } else {
+      $answer.addClass('open'); 
+   
+      
+      $answer.slideDown();
+  
+      $(this).find("span").text("-");
+      
+    }
+});
+});
+</script>
+<style>
+header{height:200px;
+background:linear-gradient(to top left, #000066 0%, #6699ff 100%);
+color:white; font-size:30px; font-family:verdana; text-align:center; padding:20px; font-style:italic; font-weight:bold; font-variant:small-caps;
+}
+footer{height:100px;
+background-color:#6699ff;
+}
+nav ul li{
+list-style-type:none;
+display: inline-block;
+}
+nav ul li a{
+text-decoration:none;
+color:white;
+margin:10px;
+}
+.faq-wrapper {
+  background-color: #e6ecf0;
+  text-align: center;
+  padding-bottom: 80px;
+  color: #5f5d60;
+}
+
+#faq-list {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Accordion */
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid #ccc;
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+
+.faq-list-item h3 {
+  font-size: 14px;
+}
+
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:#ccc;
+  font-size:13px;
+}
+
+.answer {
+  font-size: 20px;
+  display: none;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  font-weight:bold;
+  color:red;
+}
+.question{
+color:blue;
+font-weight:bold;
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Mumbai</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a>
+<li><a href="Hotel.html">Hotels</a>
+<li><a href="Restaurants.html">Restuarants</a>
+<li><a href="Contacts.html">Contacts</a>
+<li><a href="FAQ.html">FAQ</a>
+</ul>
+</nav>
+</header>
+<div class="faq-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <ul id="faq-list">
+          <li class="faq-list-item">
+            <h3 class="question">What is Mumbai famous for?</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>Mumbai, one of the major cosmopolitan cities in India, is a popular tourist attraction. It is primarily famous for large markets, mesmerising beaches, towering buildings, and exquisite five-star hotels</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">Is Mumbai a capital state</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>Yes, Mumbai is the capital of Maharashtra</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">What are Mumbai's most famous dishe</h3>
+            <span>+</span>
+            <div class="answer">
+              <p> Vada pav is noted as the most popular street food in Mumbai.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<footer>
+<p>With the help of Mindchamp and there wonderful clases</p>
+To Know More About Mumbai <a href="https://www.bing.com/travel/place-information?q=Mumbai&SID=fbbc8d69-667a-e1ff-34bf-e524be01025d&form=TGBWPT&entrypoint=TGBWPT">Click Here</a>
+</footer>
+</body>
+</html>
